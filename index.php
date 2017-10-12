@@ -3,11 +3,10 @@
 require 'vendor/autoload.php';
 use api\Request;
 
-
 $user = 'Syneot';
 
-$newuser = new Request($user);
-
+$request = new Request($user);
+$newuser = $request->usersInfo();
 
 ?>
 
@@ -42,9 +41,9 @@ $newuser = new Request($user);
 
             for($i = 0; $i <= 2; $i++){
                 echo "<li>" . "<a href=\"";
-                echo $newdepos[$i]->html_url;
+                echo $newuser[$i]->html_url;
                 echo "\">";
-                echo $newdepos[$i]->name . "</a>";
+                echo $newuser[$i]->name . "</a>";
                 echo "</li>";
             }
             ?>
