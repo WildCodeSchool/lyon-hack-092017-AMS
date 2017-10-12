@@ -14,12 +14,14 @@
 </head>
 <body>
 <div class="container">
-
+ <h1>GitHub Info</h1>
 
     <form action="">
 <div class="input-field col s12">
-    <label for="username">Username Github</label>
+    <label for="username">Put Username Github</label>
     <input id="username" type="text" class="validate">
+
+
 </div>
     <button class="btn waves-effect waves-light" type="submit" name="action">Submit
         <i class="material-icons right">send</i>
