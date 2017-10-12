@@ -7,7 +7,7 @@ $user = 'Syneot';
 
 $request = new Request($user);
 $newuser = $request->usersInfo();
-
+$newrepo = $request->reposInfo();
 ?>
 
 <!doctype html>
@@ -41,9 +41,9 @@ $newuser = $request->usersInfo();
 
             for($i = 0; $i <= 2; $i++){
                 echo "<li>" . "<a href=\"";
-                echo $newuser[$i]->html_url;
+                echo $newrepo[$i]->html_url;
                 echo "\">";
-                echo $newuser[$i]->name . "</a>";
+                echo $newrepo[$i]->name . "</a>";
                 echo "</li>";
             }
             ?>
