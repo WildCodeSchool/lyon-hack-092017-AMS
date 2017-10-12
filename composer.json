@@ -1,0 +1,16 @@
+{
+    "name": "api/github",
+    "description": "testapi",
+    "authors": [
+        {
+            "name": "al2b",
+            "email": "deboissieu.al@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {"api\\": "App/"}
+    }
+}
