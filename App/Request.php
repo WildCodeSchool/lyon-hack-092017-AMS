@@ -36,5 +36,19 @@ class Request
         return $newuser;
     }
 
+    public function reposInfo()
+    {
+        $config = require "login.php";
+        $login = $config["login"];
+        $pass = $config["pass"];
+
+        $res = $this->Guzzle->request('GET', 'https://api.github.com/users/' . $this->user . '/repos', [
+            'auth' => ["$login", "$pass"]
+        ]);
+        $newuser = json_decode($res->getBody());
+
+        return $newuser;
+    }
+
 
 }
