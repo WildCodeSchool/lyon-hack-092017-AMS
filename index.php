@@ -3,11 +3,12 @@
 require 'vendor/autoload.php';
 use api\Request;
 
-$user = 'Syneot';
+$user = 'ManuelBriand';
 
 $request = new Request($user);
 $newuser = $request->usersInfo();
 $newrepo = $request->reposInfo();
+
 ?>
 
 <!doctype html>
@@ -37,6 +38,7 @@ $newrepo = $request->reposInfo();
             </div>
             <ul>
                 <a href=""></a>
+
             <?php
 
             for($i = 0; $i <= 2; $i++){

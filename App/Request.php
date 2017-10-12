@@ -50,5 +50,14 @@ class Request
         return $newuser;
     }
 
+    public function reposDate()
+    {
+       $newuser = $this->reposInfo();
+       $newuserArrayObject = new \ArrayObject($newuser);
+        $newuserArrayObject->updated_at->asort();
+
+        return $newuserArrayObject;
+
+    }
 
 }
