@@ -1,32 +1,14 @@
 <?php
+
 require 'vendor/autoload.php';
-
-$user = "ManuelBriand";
-$client = new GuzzleHttp\Client();
-$res = $client->request('GET', 'https://api.github.com/users/' . $user, [
-    'auth' => ['Syneot', 'BoumBoum2014'],
-]);
-//echo $res->getStatusCode();
-// "200"
-//echo $res->getHeader('content-type');
-// 'application/json; charset=utf8'
-//echo $res->getBody();
-// {"type":"User"...'
-
-//foreach ($res->getBody() as $name => $values) {
-//    echo $name . ': ' . implode(', ', $values) . "\r\n";
-//}
-
-$newuser = json_decode($res->getBody());
-//var_dump($newuser);
+use api\Request;
 
 
-$res2 = $client->request('GET', 'https://api.github.com/users/' . $user . "/repos", [
-    'auth' => ['Syneot', 'BoumBoum2014'],
-]);
+$user = 'Syneot';
 
-$newdepos = json_decode($res2->getBody());
-//var_dump($newdepos);
+$newuser = new Request($user);
+
+
 ?>
 
 <!doctype html>
