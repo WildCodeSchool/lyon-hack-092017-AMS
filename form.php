@@ -14,17 +14,29 @@
 </head>
 <body>
 <div class="container">
+    <br><br><br><br><br><br><br>
+    <div class="row">
+        <div class="col s12">
+            <div class="card center-align blue-grey darken-3">
+                <div class="card-content white-text">
+                    <h2>GitHub Info</h2>
+
+                    <form action="code.php" method="post">
+                        <div class="input-field col s12">
+                            <label for="username">Put Username Github</label>
+                            <input id="username" type="text" class="validate" name="username">
 
 
-    <form action="">
-<div class="input-field col s12">
-    <label for="username">Username Github</label>
-    <input id="username" type="text" class="validate">
-</div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-    </button>
-    </form>
+                        </div>
+                        <button class="btn waves-effect waves-light pulse" type="submit" name="action">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

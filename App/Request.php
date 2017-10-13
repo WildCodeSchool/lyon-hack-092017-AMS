@@ -31,6 +31,8 @@ class Request
         $res = $this->Guzzle->request('GET', 'https://api.github.com/users/' . $this->user, [
             'auth' => ["$login", "$pass"]
         ]);
+
+
         $newuser = json_decode($res->getBody());
 
         return $newuser;
@@ -60,4 +62,14 @@ class Request
 
     }
 
+    public function valid()
+    {
+
+        if(curl_errno($this->usersInfo()))
+        {
+            return curl_error($this->usersInfo());
+        }
+
+
+    }
 }
