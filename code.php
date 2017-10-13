@@ -1,6 +1,16 @@
 <?php
+require 'vendor/autoload.php';
+use api\File;
 
-$user = $_POST['username'];
+    $user = $_POST['username'];
+    $monfichier = fopen('snippets/new.txt', 'w+');
+    $template = file_get_contents("snippets/1.txt");
+    fputs($monfichier, $template);
+
+    $generate = new File($user);
+    $generate->writeApiUser();
+    $generate->writeRepos();
+
 ?>
 <!doctype html>
 <html lang="en">
