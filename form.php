@@ -19,7 +19,7 @@
         <div class="col s12">
             <div class="card center-align blue-grey darken-3">
                 <div class="card-content white-text">
-                    <h2>GitHub Info</h2>
+                    <h2>GitHub API</h2>
 
                     <form action="code.php" method="post">
                         <div class="input-field col s12">
@@ -28,7 +28,7 @@
 
 
                         </div>
-                        <button class="btn waves-effect waves-light pulse" type="submit" name="action">Submit
+                        <button class="btn waves-effect waves-light light-blue darken-1" type="submit" name="action">Submit
                             <i class="material-icons right">send</i>
                         </button>
                     </form>
