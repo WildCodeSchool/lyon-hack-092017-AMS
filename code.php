@@ -28,7 +28,7 @@ $newrepo = $request->reposInfo();
 </head>
 <section>
     <div class="section light-blue lighten-2">
-        <br><br><br><br><br><br><br>
+        <br><br>
         <div class="container ">
 
 
@@ -49,7 +49,7 @@ $newrepo = $request->reposInfo();
                         </div>
 
                         <ul>
-                            <li>My last repos :</li>
+                            <li class="white-text">My last repos :</li>
                             <?php
 
                             for($i = 0; $i <= 2; $i++){
@@ -64,7 +64,7 @@ $newrepo = $request->reposInfo();
 
 
                         <div class="card-action">
-                            <a href="<?php echo $newuser->html_url;?>">Go in my github</a>
+                            <a href="<?php echo $newuser->html_url;?>" class="white-text">Go in my github</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,6 @@ $newrepo = $request->reposInfo();
                         <div class="card-content blue-grey darken-3">
                             <span class="card-title white-text">Your code :</span>
 
-                            <button id="copy" type="button">Copy in clipboard</button>
                             <blockquote class="white-text">
                                 <p>
 
@@ -127,7 +126,7 @@ $newrepo = $request->reposInfo();
 <div class="container">
     <div class="row">
         <div class="col s3">
-            <div class="card">
+            <div class="card center-align blue-grey darken-3">
                 <div class="card-image">
                     <img src="<?php
                     $texte = '<?php echo $json->avatar_url;?>';
@@ -135,13 +134,14 @@ $newrepo = $request->reposInfo();
                     ?>">
                     <span class="card-title"></span>
                 </div>
-                <div class="card-content">
+                <div class="card-content white-text">
                     <h3><?php
                         $texte = '<?php echo $json->login;?>';
                         echo $texte;
                         ?></h3>
                 </div>
                 <ul>
+                    <li class="white-text">My last repos :</li>
                     <?php
                     $texte = '<?php
                     for($i = 0; $i <= 2; $i++){';

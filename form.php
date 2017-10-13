@@ -28,13 +28,13 @@ $newrepo = $request->reposInfo();
 </head>
 <body class="light-blue lighten-2">
 <div class="container">
-    <br><br><br><br><br><br><br>
-
+    <br>
     <div class="row">
         <div class="col s12">
             <div class="card center-align blue-grey darken-3">
                 <div class="card-content white-text">
-                    <h2>Generat Your Github Snippet</h2>
+                    <img src="https://www.theodo.fr/uploads/blog//2016/05/octocat.png" alt="">
+                    <h2>Generate Your Github Snippet</h2>
 
                     <form action="code.php" method="post">
                         <div class="input-field col s12">
