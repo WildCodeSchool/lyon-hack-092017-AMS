@@ -17,7 +17,7 @@ $user = $_POST['username'];
     <link rel="stylesheet" href="styles.css">
 </head>
 <section>
-    <div class="section light-blue darken-">
+    <div class="section light-blue lighten-2">
         <div class="container">
 
             <div class="row">
