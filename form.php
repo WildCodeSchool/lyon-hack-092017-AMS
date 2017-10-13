@@ -1,4 +1,18 @@
+<?php
 
+require 'vendor/autoload.php';
+use api\Request;
+
+$user = 'ManuelBriand';
+
+$request = new Request($user);
+
+
+$newuser = $request->usersInfo();
+$newrepo = $request->reposInfo();
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,14 +26,15 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 </head>
-<body>
+<body class="light-blue lighten-2">
 <div class="container">
     <br><br><br><br><br><br><br>
+
     <div class="row">
         <div class="col s12">
             <div class="card center-align blue-grey darken-3">
                 <div class="card-content white-text">
-                    <h2>GitHub API</h2>
+                    <h2>Generat Your Github Snippet</h2>
 
                     <form action="code.php" method="post">
                         <div class="input-field col s12">
