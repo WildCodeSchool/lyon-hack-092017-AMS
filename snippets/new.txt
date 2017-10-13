@@ -1,7 +1,7 @@
 
 <?php
 
-curl_init('https://api.github.com/users/ManuelBriand');
+curl_init('https://api.github.com/users/fantasiag');
 curl_setopt($url, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($url, CURLOPT_HEADER, 0);
 curl_setopt($url, CURLOPT_TIMEOUT, 3);
@@ -11,7 +11,7 @@ $data = curl_exec($url);
 curl_close($url);
 $json = json_decode($data);
 
-curl_init('https://api.github.com/users/ManuelBriand/repos');
+curl_init('https://api.github.com/users/fantasiag/repos');
 curl_setopt($repos, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($repos, CURLOPT_HEADER, 0);
 curl_setopt($repos, CURLOPT_TIMEOUT, 3);

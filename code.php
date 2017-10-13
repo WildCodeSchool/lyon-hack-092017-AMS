@@ -2,16 +2,23 @@
 require 'vendor/autoload.php';
 
 use api\File;
+use api\Request;
 
-    $user = $_POST['username'];
-    //$monfichier = fopen('snippets/new.txt', 'w+');
-    //$template = file_get_contents("snippets/1.txt");
-    //fputs($monfichier, $template);
+$user = $_POST['username'];
 
-    //$generate = new File($user);
-    //$generate->writeApiUser();
-    //$generate->writeRepos();
+    $monfichier = fopen('snippets/new.txt', 'w+');
+    $template = file_get_contents("snippets/1.txt");
+    fputs($monfichier, $template);
 
+    $generate = new File($user);
+    $generate->writeApiUser();
+    $generate->writeRepos();
+
+
+$request = new Request($user);
+
+$newuser = $request->usersInfo();
+$newrepo = $request->reposInfo();
 
 ?>
 <!doctype html>
@@ -39,7 +46,7 @@ use api\File;
                 <div class="col s9 center-align">
                     <a href="form.php" class="waves-effect waves-light btn blue-grey darken-3">Go back to the Generator</a>
                     <br><br><br>
-                    <a  class="waves-effect waves-light btn green darken-1">Click to download the Code</a>
+                    <a  class="waves-effect waves-light btn green darken-1" href="download.php">Click to download the Code</a>
                 </div>
                 <div class="col s3">
                     <div class="card center-align blue-grey darken-3">

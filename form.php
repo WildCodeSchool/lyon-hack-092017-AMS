@@ -3,13 +3,7 @@
 require 'vendor/autoload.php';
 use api\Request;
 
-$user = 'ManuelBriand';
 
-$request = new Request($user);
-
-
-$newuser = $request->usersInfo();
-$newrepo = $request->reposInfo();
 
 
 ?>
