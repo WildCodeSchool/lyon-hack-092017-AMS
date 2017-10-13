@@ -1,14 +1,17 @@
 <?php
 require 'vendor/autoload.php';
-use api\Request;
 
+use api\File;
 
-$user = $_POST['username'];
-$request = new Request($user);
+    $user = $_POST['username'];
+    //$monfichier = fopen('snippets/new.txt', 'w+');
+    //$template = file_get_contents("snippets/1.txt");
+    //fputs($monfichier, $template);
 
+    //$generate = new File($user);
+    //$generate->writeApiUser();
+    //$generate->writeRepos();
 
-$newuser = $request->usersInfo();
-$newrepo = $request->reposInfo();
 
 ?>
 <!doctype html>
