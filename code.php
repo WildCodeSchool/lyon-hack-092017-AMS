@@ -3,13 +3,13 @@ require 'vendor/autoload.php';
 use api\File;
 
     $user = $_POST['username'];
-    $monfichier = fopen('snippets/new.txt', 'w+');
-    $template = file_get_contents("snippets/1.txt");
-    fputs($monfichier, $template);
+    //$monfichier = fopen('snippets/new.txt', 'w+');
+    //$template = file_get_contents("snippets/1.txt");
+    //fputs($monfichier, $template);
 
-    $generate = new File($user);
-    $generate->writeApiUser();
-    $generate->writeRepos();
+    //$generate = new File($user);
+    //$generate->writeApiUser();
+    //$generate->writeRepos();
 
 ?>
 <!doctype html>
